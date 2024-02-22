@@ -1,0 +1,52 @@
+REM   Script: Session 03
+REM   Activity5
+
+CREATE TABLE salesman ( 
+    salesman_id int, 
+    salesman_name varchar2(32), 
+    salesman_city varchar2(32), 
+    commission int 
+);
+
+describe salesman
+
+
+select * from salesman;
+
+insert into salesman values(5002, 'Nail Knite', 'Paris', 13);
+
+insert all 
+		into salesman values (5003, 'Ross', 'london', 14) 
+		into salesman values (5004, 'Nick', 'Rome', 15) 
+		into salesman values (5005, 'Tom', 'Paris', 16) 
+		into salesman values (5006, 'Peter', 'Delhi', 17) 
+select 1 from dual;
+
+select * from salesman;
+
+select salesman_id ,salesman_city from salesman;
+
+select * from salesman where salesman_city='Paris';
+
+select salesman_id ,commission from salesman where salesman_name='Nick';
+
+alter table salesman add grade int;
+
+describe salesman
+
+
+describe * from salesman
+
+
+update salesman set grade=100;
+
+select * from salesman;
+
+update salesman set grade=200 where salesman_city='Rome';
+
+update salesman set grade=300 where salesman_name='Tom';
+
+update salesman set salesman_name='Geller' where salesman_name='Ross';
+
+select * from salesman;
+
